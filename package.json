@@ -1,0 +1,19 @@
+{
+  "name": "scheduler-system",
+  "version": "1.0.0",
+  "description": "A fully functional scheduler system with recurring weekly slots and exception handling",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build:all": "cd backend && npm run build && cd ../frontend && npm run build",
+    "start:dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "start:prod": "concurrently \"cd backend && npm start\" \"cd frontend && serve -s build -l 3000\"",
+    "migrate": "cd backend && npm run migrate",
+    "test:all": "cd backend && npm test && cd ../frontend && npm test"
+  },
+  "keywords": ["scheduler", "calendar", "react", "nodejs", "postgresql"],
+  "author": "OpenHands",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
